@@ -11,7 +11,6 @@ body
     margin: 0;
     font-size: 1em;
     background-color: #35363A;
-    
 }
 
 /* Utility Class */
@@ -31,12 +30,15 @@ img
     width: 100%;
 }
 
+input
+{
+    color: black;
+}
+
 input::placeholder
 {
     font-family: 'Segoe UI', Tahoma, sans-serif; 
     font-size: 16px;   
-    /* letter-spacing: 1px; */
-    padding: 10px;
 }
 
 .icon-img
@@ -205,6 +207,7 @@ header>.right
     z-index: -1;
     border-radius: 5px;
 }
+
 /* shortcut item */
 .shortcut-item
 {
@@ -220,5 +223,65 @@ header>.right
     width: 18px;
 }
 
+/* dark */
+.dark
+{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
+    flex-direction: column;
+    
+}
+
+.dark span
+{
+    color : #4994F8
+}
+
+/* darkModeToggleContainer */
+.darkModeToggleContainer
+{
+    position: relative;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.toggle-label
+{
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+.toggle-label:before {
+    content: attr(data-off);
+    color: white;
+    position: absolute;
+}
 
 
+.toggle-label:after {
+    content: attr(data-on);
+    color: black;
+}
+
+.toggle-input:checked ~ .toggle-label
+{
+    background-color: white;
+}
+
+.toggle-input:checked ~ .toggle-label:before
+{
+    opacity: 0;
+}
+
+.toggle-input:checked ~ .toggle-label:after
+{
+    opacity: 1;
+}
