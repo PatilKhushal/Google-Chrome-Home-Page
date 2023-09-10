@@ -72,7 +72,7 @@ header>.right
     cursor: pointer;
 }
 
-.img-grp:hover:before
+.img-grp:hover::before
 {
     content: "";
     position: absolute;
@@ -259,14 +259,14 @@ header>.right
     text-align: center;
 }
 
-.toggle-label:before {
+.toggle-label::before {
     content: attr(data-off);
     color: white;
     position: absolute;
 }
 
 
-.toggle-label:after {
+.toggle-label::after {
     content: attr(data-on);
     color: black;
 }
@@ -276,12 +276,12 @@ header>.right
     background-color: white;
 }
 
-.toggle-input:checked ~ .toggle-label:before
+.toggle-input:checked ~ .toggle-label::before
 {
     opacity: 0;
 }
 
-.toggle-input:checked ~ .toggle-label:after
+.toggle-input:checked ~ .toggle-label::after
 {
     opacity: 1;
 }
