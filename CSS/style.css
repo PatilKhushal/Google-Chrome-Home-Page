@@ -11,6 +11,7 @@ body
     margin: 0;
     font-size: 1em;
     background-color: #35363A;
+    position: relative;
 }
 
 /* Utility Class */
@@ -227,13 +228,12 @@ header>.right
 .dark
 {
     display: flex;
-    position: absolute;
+    position: fixed;
     justify-content: center;
     align-items: center;
     bottom: 20px;
     right: 20px;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
 .dark span
